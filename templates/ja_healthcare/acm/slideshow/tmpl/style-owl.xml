@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 1</title>
+  <sampledata>
+ </sampledata>
+  <fields name="slideshow">
+		<fieldset name="basic" label="SLIDESHOW_BASIC_LABEL" description="SLIDESHOW_BASIC_DESC">
+			<field name="effect" type="list" label="SLIDESHOW_TIME_EFFECT_LABEL" description="SLIDESHOW_TIME_EFFECT_DESC" default="effect-normal">
+				<option value="effect-fast">Fast</option>
+				<option value="effect-normal">Normal</option>
+				<option value="effect-slow">Slow</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset name="basic2" label="SLIDESHOW_BASIC_2_LABEL" description="SLIDESHOW_BASIC_2_DESC">
+			<field name="data" type="jalist">
+				<item name="title" type="text" 
+					description="SLIDESHOW_TITLE_DES"
+					label="SLIDESHOW_TITLE"
+					default=""
+					/>
+
+				<item name="desc" type="text" 
+				description="SLIDESHOW_DESCRIPTIONS_DES"
+				label="SLIDESHOW_DESCRIPTIONS"
+				default=""
+				/>
+
+				<item name="btn-title" type="text" 
+				description="SLIDESHOW_BUTTON_TITLE_DES"
+				label="SLIDESHOW_BUTTON_TITLE"
+				default=""
+				/>
+
+				<item name="btn-link" type="text" 
+				description="SLIDESHOW_BUTTON_DES"
+				label="SLIDESHOW_BUTTON"
+				default=""
+				/>
+
+				<item name="image" type="media" 
+					description="SLIDESHOW_IMG_DES"
+					label="SLIDESHOW_IMG_TITLE"
+					default=""
+					/>
+			</field>
+			
+			
+		</fieldset>
+  </fields>
+</form>

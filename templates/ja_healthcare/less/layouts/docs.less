@@ -1,0 +1,110 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+//
+// DEMO TYPOGRAPHY
+// --------------------------------------------------------
+// Used for Typography Page. Removed if you don't want it :)
+
+.docs-section {
+  font-size: @font-size-base;
+  margin-top: @t3-global-margin * 2;
+
+  // Grid Content
+  .row {
+    margin-left: -@t3-global-margin /2;
+    margin-right: -@t3-global-margin /2;
+
+    > div {
+      padding-left: @t3-global-padding / 2;
+      padding-right: @t3-global-padding / 2;
+    }
+  }
+
+  // Title Block
+  h3 {
+    font-weight: @font-weight-normal;
+  }
+
+  .page-header {
+    h2 {
+      border-bottom: 1px solid @hr-border;
+      color: @gray-dark-lv2;
+      font-size: @font-size-h3;
+      font-weight: @font-weight-normal;
+      line-height: 1.0;
+      margin: 0;
+      padding: 0 0 @t3-global-padding/2 0;
+      text-transform: none;
+      position: relative;
+
+      &::before {
+        background: @brand-primary;
+        bottom: -2px;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 50px;
+
+      }
+    }
+  }
+
+  .dropdown-menu {    
+  }
+}
+
+
+// Core Typo
+// ----------------
+.example-type {
+  h1,h2,h3,h4,h5,h6 {
+    margin: @t3-global-margin 0;
+    font-weight: 100;
+  }
+}
+
+// Forms
+// ----------------
+.example-buttons,
+.example-inputs {
+  .btn,
+  .form-control {
+    box-shadow: none;
+    width: 100%;
+    margin-bottom: @t3-global-margin;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+
+      // Left align the logo on  Tablets / Desktop
+      @media screen and (min-width: @screen-sm) {
+        float: left;
+        width: 16%;
+        padding-right: @t3-global-padding;
+      }
+    }
+  }
+}
+
+.example-buttons {
+  ul {
+    li {
+      // Tablet view
+      @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+        width: 50%;
+      }
+    }
+  }
+}

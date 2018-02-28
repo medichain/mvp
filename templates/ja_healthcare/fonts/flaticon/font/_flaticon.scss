@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 19/02/2016 14:50
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-ambulance-facing-right:before { content: "\f100"; }
+.flaticon-asthma-inhaler:before { content: "\f101"; }
+.flaticon-autorefractor:before { content: "\f102"; }
+.flaticon-baby-incubators:before { content: "\f103"; }
+.flaticon-bald-pharmacist:before { content: "\f104"; }
+.flaticon-bandage-roll:before { content: "\f105"; }
+.flaticon-blood-bag:before { content: "\f106"; }
+.flaticon-blood-pressure-gauge:before { content: "\f107"; }
+.flaticon-blood-transfussion:before { content: "\f108"; }
+.flaticon-checkup-list:before { content: "\f109"; }
+.flaticon-ct-scanners:before { content: "\f10a"; }
+.flaticon-defribillator:before { content: "\f10b"; }
+.flaticon-dental-chair:before { content: "\f10c"; }
+.flaticon-dental-tool:before { content: "\f10d"; }
+.flaticon-doctor-bag:before { content: "\f10e"; }
+.flaticon-drug-tablets:before { content: "\f10f"; }
+.flaticon-emergency-bed:before { content: "\f110"; }
+.flaticon-emergency-box:before { content: "\f111"; }
+.flaticon-erlenmeyer-flask:before { content: "\f112"; }
+.flaticon-eye-chart:before { content: "\f113"; }
+.flaticon-glass-test:before { content: "\f114"; }
+.flaticon-hanger-with-package-of-serum:before { content: "\f115"; }
+.flaticon-heart-monitor:before { content: "\f116"; }
+.flaticon-herbal-medicine:before { content: "\f117"; }
+.flaticon-hospital-bed:before { content: "\f118"; }
+.flaticon-hospital-bedpan:before { content: "\f119"; }
+.flaticon-hospital-curtain:before { content: "\f11a"; }
+.flaticon-hospital-microscope:before { content: "\f11b"; }
+.flaticon-hospital-x-ray:before { content: "\f11c"; }
+.flaticon-inclined-thermometer:before { content: "\f11d"; }
+.flaticon-injecting-syringe:before { content: "\f11e"; }
+.flaticon-medicine-mixing-bowl:before { content: "\f11f"; }
+.flaticon-nurse-bust:before { content: "\f120"; }
+.flaticon-old-man-walker:before { content: "\f121"; }
+.flaticon-old-scale:before { content: "\f122"; }
+.flaticon-operating-mask:before { content: "\f123"; }
+.flaticon-otoscope:before { content: "\f124"; }
+.flaticon-oxygen-tube:before { content: "\f125"; }
+.flaticon-pipette-with-liquid:before { content: "\f126"; }
+.flaticon-pregnancy-test:before { content: "\f127"; }
+.flaticon-stethoscope:before { content: "\f128"; }
+.flaticon-surgeon-with-mask:before { content: "\f129"; }
+.flaticon-surgery-knife:before { content: "\f12a"; }
+.flaticon-surgical-scissors:before { content: "\f12b"; }
+.flaticon-syrup-with-spoon:before { content: "\f12c"; }
+.flaticon-three-test-tubes:before { content: "\f12d"; }
+.flaticon-two-capsules:before { content: "\f12e"; }
+.flaticon-two-crutches:before { content: "\f12f"; }
+.flaticon-two-plasters:before { content: "\f130"; }
+.flaticon-wheelchair-facing-right:before { content: "\f131"; }
+    
+    $font-Flaticon-ambulance-facing-right: "\f100";
+    $font-Flaticon-asthma-inhaler: "\f101";
+    $font-Flaticon-autorefractor: "\f102";
+    $font-Flaticon-baby-incubators: "\f103";
+    $font-Flaticon-bald-pharmacist: "\f104";
+    $font-Flaticon-bandage-roll: "\f105";
+    $font-Flaticon-blood-bag: "\f106";
+    $font-Flaticon-blood-pressure-gauge: "\f107";
+    $font-Flaticon-blood-transfussion: "\f108";
+    $font-Flaticon-checkup-list: "\f109";
+    $font-Flaticon-ct-scanners: "\f10a";
+    $font-Flaticon-defribillator: "\f10b";
+    $font-Flaticon-dental-chair: "\f10c";
+    $font-Flaticon-dental-tool: "\f10d";
+    $font-Flaticon-doctor-bag: "\f10e";
+    $font-Flaticon-drug-tablets: "\f10f";
+    $font-Flaticon-emergency-bed: "\f110";
+    $font-Flaticon-emergency-box: "\f111";
+    $font-Flaticon-erlenmeyer-flask: "\f112";
+    $font-Flaticon-eye-chart: "\f113";
+    $font-Flaticon-glass-test: "\f114";
+    $font-Flaticon-hanger-with-package-of-serum: "\f115";
+    $font-Flaticon-heart-monitor: "\f116";
+    $font-Flaticon-herbal-medicine: "\f117";
+    $font-Flaticon-hospital-bed: "\f118";
+    $font-Flaticon-hospital-bedpan: "\f119";
+    $font-Flaticon-hospital-curtain: "\f11a";
+    $font-Flaticon-hospital-microscope: "\f11b";
+    $font-Flaticon-hospital-x-ray: "\f11c";
+    $font-Flaticon-inclined-thermometer: "\f11d";
+    $font-Flaticon-injecting-syringe: "\f11e";
+    $font-Flaticon-medicine-mixing-bowl: "\f11f";
+    $font-Flaticon-nurse-bust: "\f120";
+    $font-Flaticon-old-man-walker: "\f121";
+    $font-Flaticon-old-scale: "\f122";
+    $font-Flaticon-operating-mask: "\f123";
+    $font-Flaticon-otoscope: "\f124";
+    $font-Flaticon-oxygen-tube: "\f125";
+    $font-Flaticon-pipette-with-liquid: "\f126";
+    $font-Flaticon-pregnancy-test: "\f127";
+    $font-Flaticon-stethoscope: "\f128";
+    $font-Flaticon-surgeon-with-mask: "\f129";
+    $font-Flaticon-surgery-knife: "\f12a";
+    $font-Flaticon-surgical-scissors: "\f12b";
+    $font-Flaticon-syrup-with-spoon: "\f12c";
+    $font-Flaticon-three-test-tubes: "\f12d";
+    $font-Flaticon-two-capsules: "\f12e";
+    $font-Flaticon-two-crutches: "\f12f";
+    $font-Flaticon-two-plasters: "\f130";
+    $font-Flaticon-wheelchair-facing-right: "\f131";

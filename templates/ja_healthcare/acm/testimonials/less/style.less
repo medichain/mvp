@@ -1,0 +1,145 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+.acm-testimonials {
+	border-radius: @border-radius-base;
+
+	.testimonial-content {
+		padding: 0;
+		font-family: @font-family-serif;
+		position: relative;
+	}
+
+	&.style-dark {
+		background: @gray-dark-lv2;
+
+		.testimonial-content {
+			padding: @t3-global-padding;
+		}
+
+		.testimonial-text {
+			color: @white;
+		}
+
+		.carousel-control .fa {
+			border-color: @white;
+			color: @white;
+		}
+	}
+
+	// DEFAULT STYLE
+	// -------------
+
+	&.default {
+	}
+	
+	.carousel-inner {
+		.item {
+			padding: @t3-global-padding;
+		}
+	}
+
+	.fa {
+		color: @gray-dark;
+		font-size: @font-size-large * 2;
+		margin-bottom: @t3-global-margin;
+	}
+
+	.testimonial-img {
+		margin: 0;
+
+		img {
+			max-width: 100%;
+			display: inline-block;
+			border: 1px solid transparent;
+			border-radius: 50%;
+		}
+	}
+
+	.testimonial-text {
+		color: @gray-dark;
+		margin-bottom: 0;
+		font-size: @font-size-large;
+
+		&::before {
+			content: '"';
+		}
+
+		&::after {
+			content: '"';
+		}
+	}
+
+	.author-info {
+		color: @gray-light;
+		margin-top: @t3-global-margin/2;
+	}
+
+	.author-image {
+		margin-top: -@t3-global-margin;
+		margin-bottom: @t3-global-margin;
+		display: block;
+
+		img {
+			border: 1px solid transparent;
+			border-radius: 50%;	
+		}
+	}
+
+	// Control 
+	.owl-theme .owl-controls {
+		margin: 0;
+
+		.owl-pagination {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.owl-buttons > div {
+			background: none;
+			position: absolute;
+			top: 50%;
+			margin: -16px 0 0 0;
+			padding: 0;
+			left: 10px;
+
+			&.owl-next {
+				left: auto;
+				right: 10px;
+			}
+		}
+
+		.fa {
+			margin-bottom: 0;
+			border: 2px solid @gray-dark;
+			color: @gray-dark;
+			border-radius: 50%;
+			width: 32px;
+			height: 32px;
+			text-align: center;
+			line-height: 28px;
+			display: block;
+			font-size: @font-size-base;
+		}
+	}
+}
+
+
+// FIX BUG IE 8
+// ------------
+.ie8 .acm-testimonials.style-6 div.carousel .carousel-inner .item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

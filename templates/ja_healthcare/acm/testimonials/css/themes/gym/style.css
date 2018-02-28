@@ -1,0 +1,100 @@
+.acm-testimonials {
+  border-radius: 3px;
+}
+.acm-testimonials .testimonial-content {
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+}
+.acm-testimonials.style-dark {
+  background: #111111;
+}
+.acm-testimonials.style-dark .testimonial-content {
+  padding: 24px;
+}
+.acm-testimonials.style-dark .testimonial-text {
+  color: #ffffff;
+}
+.acm-testimonials.style-dark .carousel-control .fa {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.acm-testimonials .carousel-inner .item {
+  padding: 24px;
+}
+.acm-testimonials .fa {
+  color: #333333;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+.acm-testimonials .testimonial-img {
+  margin: 0;
+}
+.acm-testimonials .testimonial-img img {
+  max-width: 100%;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.acm-testimonials .testimonial-text {
+  color: #333333;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.acm-testimonials .testimonial-text::before {
+  content: '"';
+}
+.acm-testimonials .testimonial-text::after {
+  content: '"';
+}
+.acm-testimonials .author-info {
+  color: #999999;
+  margin-top: 12px;
+}
+.acm-testimonials .author-image {
+  margin-top: -24px;
+  margin-bottom: 24px;
+  display: block;
+}
+.acm-testimonials .author-image img {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.acm-testimonials .owl-theme .owl-controls {
+  margin: 0;
+}
+.acm-testimonials .owl-theme .owl-controls .owl-pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.acm-testimonials .owl-theme .owl-controls .owl-buttons > div {
+  background: none;
+  position: absolute;
+  top: 50%;
+  margin: -16px 0 0 0;
+  padding: 0;
+  left: 10px;
+}
+.acm-testimonials .owl-theme .owl-controls .owl-buttons > div.owl-next {
+  left: auto;
+  right: 10px;
+}
+.acm-testimonials .owl-theme .owl-controls .fa {
+  margin-bottom: 0;
+  border: 2px solid #333333;
+  color: #333333;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 28px;
+  display: block;
+  font-size: 14px;
+}
+.ie8 .acm-testimonials.style-6 div.carousel .carousel-inner .item {
+  display: none;
+}
+.ie8 .acm-testimonials.style-6 div.carousel .carousel-inner .item.active {
+  display: block;
+}

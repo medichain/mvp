@@ -1,0 +1,99 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.acm-accordion {
+  text-align: left;
+  
+  &.panel-group .panel {
+    border: 0;
+    background: @white;
+    .box-shadow(none);
+    
+    + .panel {
+      margin-top: @t3-global-margin/2;
+    }
+  }
+
+  .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: 1px solid @t3-border-color;
+    border-top: 0;
+    border-radius: 0 0 @border-radius-base @border-radius-base;
+    color: @text-color;
+    padding: @t3-global-padding;
+  }
+
+  .panel-title {
+    position: relative;
+    font-size: @font-size-h4;
+
+    a {
+      background: @white; 
+      color: @brand-primary;
+      border: 1px solid @t3-border-color;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+      display: block;
+      font-weight: @font-weight-normal;
+      height: 50px;
+      line-height: 50px; 
+      padding-right: 50px;
+      text-indent: @t3-global-padding;
+      .text-overflow();
+
+      &.collapsed {
+        color: @gray-dark-lv2;
+        border-radius: @border-radius-base;
+      }
+
+      &:focus,&:hover,&:focus {
+        outline: none;
+        text-decoration: none;
+      }
+
+      &:hover {
+        color: @brand-primary;
+      }
+    }
+
+    .marker {
+      background: transparent;
+      color: @gray-light;
+      height: 50px;
+      font-size: @font-size-base;
+      line-height: 50px;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-indent: 0;
+      width: 50px;
+    }
+
+    .marker-close {
+      display: none;
+    }
+
+    .marker-open {
+      display: inline-block;
+    }
+
+    .collapsed {
+      .marker-close {
+        display: inline-block;
+      }
+
+      .marker-open {
+        display: none;
+      }
+    }
+  }
+
+  .panel-heading {
+    padding: 0;
+  }
+}

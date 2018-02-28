@@ -1,0 +1,328 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/megamenu.less";
+
+
+//
+// BASIC STYLE FOR MEGAMENU
+// -------------------------
+.t3-megamenu {
+
+  // THE MEGAMENU
+  //--------------------------------------------
+
+  // Global Menu Inner padding
+  // -------------------------
+  .mega-inner {
+  }
+
+  // Inner Padding for 1 column
+  .col-lg-12 .mega-inner,
+  .col-md-12 .mega-inner,
+  .col-sm-12 .mega-inner,
+  .col-xs-12 .mega-inner {
+  }
+
+
+  // Menu Grids
+  // ----------
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row + .row  {
+    padding-top: @t3-global-padding / 2;
+    border-top: 1px solid @hr-border;
+  }
+
+
+  // The Dropdown
+  // ------------
+  .mega {
+    &.open > .dropdown-toggle {
+      &::after {
+        content: "";
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid @white;
+        position: absolute;
+        bottom: -(@t3-global-margin/2 + 1);
+        left: @t3-global-margin;
+        z-index: @zindex-navbar + 1;
+      }
+    }
+
+    & > .mega-dropdown-menu {
+      margin-top: @t3-global-margin/2;
+    }
+
+    .mega-dropdown-inner > .row {
+      margin-right: -@grid-gutter-width/2;
+      margin-left: -@grid-gutter-width/2;
+    }
+  }
+
+
+  // Dropdown Sub Menus
+  // ------------------
+  .dropdown-submenu {
+  }
+
+
+  // The Group
+  // ---------
+  .mega-group {
+  }
+
+  // Group Title
+  // We use BS3 "dropdown-header"
+  //.mega-nav .mega-group > .mega-group-title,
+  //.dropdown-menu .mega-nav .mega-group > .mega-group-title,
+  //.dropdown-menu .active .mega-nav .mega-group > .mega-group-title
+  .dropdown-header,
+  .mega-nav .mega-group > .dropdown-header,
+  .dropdown-menu .mega-nav .mega-group > .dropdown-header,
+  .dropdown-menu .active .mega-nav .mega-group > .dropdown-header {
+    background: transparent;
+    border-bottom: 1px solid @t3-border-color;
+    color: @t3-module-title-color;
+    font-size: @font-size-h4;
+    font-weight: @font-weight-normal;
+    margin-bottom: @t3-global-margin / 1.5;
+    padding-bottom: @t3-global-padding/2;
+    line-height: normal;
+    position: relative;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid @brand-primary;
+      width: 50px;
+    }
+
+    // Link states
+    &:hover, &:active, &:focus {
+      background: inherit;
+      color: @brand-primary;
+    }
+  }
+
+  // Group Content
+  .mega-group-ct {
+    .row {
+      margin-left: -(@grid-gutter-width / 2);
+      margin-right: -(@grid-gutter-width / 2);
+    }
+  }
+
+
+  // Nav in Megamenu
+  // ---------------
+  .mega-col-nav {
+  }
+
+  // Inner padding
+  .mega-col-nav .mega-inner {
+  }
+
+  // Inner padding for nav in 1 column
+  .col-lg-12.mega-col-nav .mega-inner,
+  .col-md-12.mega-col-nav .mega-inner,
+  .col-sm-12.mega-col-nav .mega-inner,
+  .col-xs-12.mega-col-nav .mega-inner {
+  }
+
+  .mega-group .col-lg-12.mega-col-nav .mega-inner,
+  .mega-group .col-md-12.mega-col-nav .mega-inner,
+  .mega-group .col-sm-12.mega-col-nav .mega-inner,
+  .mega-group .col-xs-12.mega-col-nav .mega-inner {
+  }
+
+  // The Nav
+  .mega-nav,
+  .dropdown-menu .mega-nav {
+  }
+
+  .mega-nav > li,
+  .dropdown-menu .mega-nav > li {
+    &.active {
+      > a {
+        color: @brand-primary;
+      }
+    }
+  }
+
+  .mega-nav > li a,
+  .dropdown-menu .mega-nav > li a {
+    font-weight: @font-weight-bold;
+    .button-size(@padding-base-vertical; 0px; @font-size-base; @line-height-base; @border-radius-base);
+    .transition(padding 350ms);
+
+    &:hover, &:focus, &:active {
+      background-color: @gray-light-lv5;
+      padding-right: @padding-base-horizontal;
+      padding-left: @padding-base-horizontal;
+    }
+  }
+
+  .mega-nav > li + li,
+  .dropdown-menu .mega-nav > li + li {
+    margin-top: 0;
+    border-top: 1px solid @gray-light-lv5;
+  }
+
+  .dropdown-menu .mega-nav > li .separator {
+  }
+
+  // Nav in Group
+  .mega-group > .mega-nav,
+  .dropdown-menu .mega-group > .mega-nav {
+  }
+
+  .mega-group > .mega-nav > li,
+  .dropdown-menu .mega-group > .mega-nav > li {
+  }
+
+  .mega-group .mega-nav > li a,
+  .dropdown-menu .mega-group .mega-nav > li a {
+  }
+
+  .dropdown-menu .mega-group .mega-nav > li.active > a {
+    background: transparent;
+    color: @brand-primary;
+
+    &::after {
+      border-left-color: @brand-primary;
+    }
+  }
+
+  // The caret
+  .mega-nav .dropdown-submenu > a::after {
+    margin-right: 0;
+    border-left-color: @gray-light-lv3;
+    border-width: 3px 0 3px 3px;
+  }
+
+
+  // Modules in Megamenu
+  // -------------------
+  .mega-col-module {
+  }
+
+  // Inner padding
+  .mega-col-module .mega-inner {
+  }
+
+  // The module
+  .t3-module {
+  }
+
+  // Module Title
+  .t3-module .module-title {
+    .dropdown-header(); // Make the Module Title look like Dropdown Header
+    margin-bottom: 10px;
+  }
+
+  // Module Content
+  .t3-module .module-ct {
+  }
+
+  // List in Module
+  // Reset List Style in Module
+  .t3-module ul,
+  .t3-module .nav {
+  }
+
+  .t3-module ul li,
+  .t3-module .nav li {
+    list-style: disc;
+    display: list-item;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .t3-module ul li a,
+  .t3-module .nav li a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    background: none;
+    font: inherit;
+    white-space: normal;
+    // Link states
+    &:hover, &:focus, &:active {
+      background: none;
+      color: inherit;
+      font: inherit;
+    }
+  }
+  
+  // Nav in Module
+  .dropdown-menu .t3-module .nav {
+  }
+
+  .dropdown-menu .t3-module .nav li {
+  }
+
+  .dropdown-menu .t3-module .t3-module li a {
+    // Link states
+    &:hover, &:focus, &:active {
+    }
+  }
+  
+
+  // The caption
+  // -----------
+  .mega-caption {
+    color: @gray-light;
+    font-size: @t3-font-size-smaller;
+    margin-top: 3px;
+    font-weight: normal;
+  }
+
+
+  // The caret
+  // ---------
+  .nav .caret,
+  .dropdown-submenu .caret,
+  .mega-menu .caret {
+  }
+
+  // Show the caret on level 0 only
+  .nav > .dropdown > .dropdown-toggle .caret {
+  }
+
+
+  // The icon
+  // --------
+  .nav [class^="icon-"],
+  .nav [class*=" icon-"],
+  .nav .fa {
+  }
+
+  // Reset the margin on Input Group Addon
+  .nav .input-group-addon [class^="icon-"],
+  .nav .input-group-addon [class*=" icon-"],
+  .nav .input-group-addon .fa {
+    margin-right: 0;
+  }
+
+  // End
+}

@@ -1,0 +1,271 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Healthcare Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+*/
+
+/* Import Font 
+---------------------- */
+@import url(https://fonts.googleapis.com/css?family=Rubik|Poppins:400,500);
+
+ /* MAIN OFFLINE STYLE
+ ------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff ;
+  height: 100%;
+}
+
+body {  
+  color: #818c98;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+ 
+#frame {
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  box-shadow:  0 0 24px rgba(0, 0, 0, 0.20);
+  border-radius: 3px;
+  margin: 150px auto;
+  padding:48px;
+  position: relative;
+  width: 500px;
+
+}
+
+#offline-img {
+  padding: 0 0 25px;
+  text-align: left;
+}
+
+#offline-img img{
+  max-width: 100%;
+}
+
+/* Title Offline
+----------------------------- */
+#offline-title {
+  display: block;
+  margin: 0  0 24px 0;
+}
+
+#offline-title h1 {
+  border-bottom: 1px solid #e6eaf0;
+  color: #23263d;
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.0;
+  margin: 0;
+  text-transform: none;
+  padding: 0 0 18px 0;  
+  position: relative;
+}
+
+#offline-title h1:before {
+  background: #3f6cb2;
+  bottom: -2px;
+  content: "";
+  left: 0;
+  height: 3px;
+  position: absolute;
+  width: 50px;
+
+}
+
+/* Form Offline
+----------------------------- */
+#offline-content {
+  padding: 0;
+  position: relative;
+}
+.form-offline {
+  margin: 0 -10px;
+}
+
+.form-group {
+  float: none;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.control-label {
+  color: #23263d;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.control-input {
+  background: transparent;
+  border: 1px solid #e6eaf0;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #c6cacf;
+  height: 38px;
+  line-height: 1.42857;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 6px 12px;
+  transition: all 0.15s;
+  width: 100%;
+}
+
+.control-input:focus,
+.control-input:active {
+  background: none;
+  border: 1px solid #0097d7;
+  color: #818c98;
+  outline: none;
+}
+
+.des-offline {
+  line-height: 1.4;
+  padding: 0 0 20px;
+}
+
+/* Remember Login
+------------------------- */
+#form-login-remember {
+  float: none;
+  max-width: 50%;
+  padding: 1px 0 30px;
+  position: relative;
+  top: 18px;
+}
+
+#form-login-remember label{
+  font-size: 11px;
+}
+
+#remember {
+  position: relative;
+  top: 1px;
+}
+
+/* Button
+------------------------- */
+#submit-buton {
+  bottom: 2px;
+  right: 0;
+  text-align: right;
+  position: absolute;
+
+}
+
+#submit-buton .button {
+  background:#3f6cb2;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.0;
+  padding: 9px 15px 12px;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#submit-buton .button:hover,
+#submit-buton .button:focus,
+#submit-buton .button:active {
+  background: #32558c;
+  cursor: pointer;
+}
+
+/* Message system
+----------------------------- */
+#system-message-container {
+  text-align: left;
+  margin-top: 40px;
+}
+
+#system-message {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid #3f6cb2;
+  border-radius: 3px;
+  margin: auto;
+  padding: 20px;
+  width: 585px;
+}
+
+#system-message p {
+  margin: 0;
+  color: rgba(0,0,0, 0.7);
+}
+
+#system-message .close {
+  display: none;
+}
+
+#system-message dt,
+#system-message .alert-heading {
+  color: #23263d;
+  border-bottom: 1px solid #3f6cb2;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.message {
+  margin-left: 0;
+}
+
+.message ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*Responsive
+------------------------------*/
+/* Control screen width 640px */
+@media screen and (max-width: 640px ) {
+  #frame {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  #system-message {
+    padding: 10px;
+    width: auto;
+  }
+
+  #submit-buton,
+  #form-login-remember {
+    position: static;
+
+  }
+
+  #submit-buton .button {
+    width: 100%;
+  }
+
+
+}
+
+/*Control screen mobile */
+@media screen and (max-width: 480px ) {
+  .form-group {
+    width: 100%;
+  }
+}

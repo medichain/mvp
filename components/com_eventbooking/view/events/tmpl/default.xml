@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="User's events">
+		<message>
+			Display list Of events which are submitted by the current logged in user
+		</message>
+	</layout>
+	<state>
+		<name>User's events</name>
+		<description>Display list Of events which are submitted by the current logged in user</description>
+	</state>
+</metadata>

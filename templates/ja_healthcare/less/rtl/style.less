@@ -1,0 +1,159 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+// RTL STYLES
+// ------------------------------------------------------
+
+// Common
+// -----------------------------
+html[dir="rtl"] {
+  .fa-angle-right{
+    &::before{
+      content: "\f104";
+    }
+  }
+  .fa-angle-left{
+    &::before{
+      content: "\f105";
+    }   
+  }
+
+  .fa-arrow-left {
+    &::before{
+      content: "\f061";
+    }
+  }
+
+  .fa-arrow-right {
+    &::before{
+      content: "\f060";
+    }
+  }
+
+}
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 @grid-gutter-width @t3-global-margin 0;
+  }
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 0 @t3-global-margin @grid-gutter-width;
+  }
+}
+
+.languageswitcherload {
+  ul {
+    float: left;
+  }
+}
+
+// owl carousel RTL
+.owl-carousel {
+	direction: ltr;
+
+	.slider-content {
+		direction: rtl;
+	}
+
+	.fa-angle-left:before {
+		content: "\f105";
+	}
+
+	.fa-angle-right:before {
+		content: "\f104";
+	}
+
+	// Slideshow
+	.acm-slideshow & {
+		div.slider-content,
+		div.owl-controls {
+			transform: translateX(50%);
+				-webkit-transform: translateX(50%);			
+		}
+
+		div.owl-controls  {
+			.owl-page:first-child::after {
+				left: 12px;
+			}
+
+			.owl-page:last-child::after {
+				right: 12px;
+			}
+		}
+
+		.item .mask {
+			transform: translateX(70%);
+				-webkit-transform: translateX(70%);
+		}
+		
+		div.owl-dots {
+			transform: translateX(50%);
+			direction: rtl;
+		}
+	}
+
+	// Feature
+	.acm-features & {
+		.owl-controls .owl-buttons > div + div {
+			margin-right: 0;
+			margin-left: @t3-global-margin / 2;
+		}
+		
+		.owl-nav.owl-nav {
+			direction: rtl !important;
+		}
+	}
+}
+
+// ACM VIDEO
+div.acm-video.style-1 {
+	.btn-rounded .fa {
+		margin-right: -6px;
+	}
+
+	.video-thumb img {
+		transform: translateX(50%);
+			-webkit-transform: translateX(50%);
+	}
+}
+
+// K2
+div.catItemExtraFields ul li span.catItemExtraFieldsLabel,
+div.genericItemExtraFields ul li span.genericItemExtraFieldsLabel,
+div.itemExtraFields ul li span.itemExtraFieldsLabel {
+	float: right;
+	margin: 0 0 0 4px;
+}
+
+.chzn-container.chzn-container-single .chzn-single div b {
+	background-position: 0 9px;
+}
+
+
+// fix display button on frontpage
+.owl-theme .owl-controls .owl-buttons div {
+	float: right;
+
+	&.owl-next {
+		margin-left: 0;
+	}
+ 
+	&.owl-prev {
+		margin-left: @t3-global-margin / 2;
+	}
+}
+
+// fix search button on nav search
+.nav-search .btn {
+	width: 40px;
+}

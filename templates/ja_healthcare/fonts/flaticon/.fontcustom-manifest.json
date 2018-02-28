@@ -1,0 +1,248 @@
+{
+  "checksum": {
+    "previous": "3f2a209b484a72132658c50c886d961a981ecde977d9676cf783499ef09560bd",
+    "current": "3f2a209b484a72132658c50c886d961a981ecde977d9676cf783499ef09560bd"
+  },
+  "fonts": [
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/Flaticon.ttf",
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/Flaticon.svg",
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/Flaticon.woff",
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/Flaticon.eot"
+  ],
+  "glyphs": {
+    "ambulance-facing-right": {
+      "codepoint": 61696,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/ambulance-facing-right.svg"
+    },
+    "asthma-inhaler": {
+      "codepoint": 61697,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/asthma-inhaler.svg"
+    },
+    "autorefractor": {
+      "codepoint": 61698,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/autorefractor.svg"
+    },
+    "baby-incubators": {
+      "codepoint": 61699,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/baby-incubators.svg"
+    },
+    "bald-pharmacist": {
+      "codepoint": 61700,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/bald-pharmacist.svg"
+    },
+    "bandage-roll": {
+      "codepoint": 61701,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/bandage-roll.svg"
+    },
+    "blood-bag": {
+      "codepoint": 61702,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/blood-bag.svg"
+    },
+    "blood-pressure-gauge": {
+      "codepoint": 61703,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/blood-pressure-gauge.svg"
+    },
+    "blood-transfussion": {
+      "codepoint": 61704,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/blood-transfussion.svg"
+    },
+    "checkup-list": {
+      "codepoint": 61705,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/checkup-list.svg"
+    },
+    "ct-scanners": {
+      "codepoint": 61706,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/ct-scanners.svg"
+    },
+    "defribillator": {
+      "codepoint": 61707,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/defribillator.svg"
+    },
+    "dental-chair": {
+      "codepoint": 61708,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/dental-chair.svg"
+    },
+    "dental-tool": {
+      "codepoint": 61709,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/dental-tool.svg"
+    },
+    "doctor-bag": {
+      "codepoint": 61710,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/doctor-bag.svg"
+    },
+    "drug-tablets": {
+      "codepoint": 61711,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/drug-tablets.svg"
+    },
+    "emergency-bed": {
+      "codepoint": 61712,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/emergency-bed.svg"
+    },
+    "emergency-box": {
+      "codepoint": 61713,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/emergency-box.svg"
+    },
+    "erlenmeyer-flask": {
+      "codepoint": 61714,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/erlenmeyer-flask.svg"
+    },
+    "eye-chart": {
+      "codepoint": 61715,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/eye-chart.svg"
+    },
+    "glass-test": {
+      "codepoint": 61716,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/glass-test.svg"
+    },
+    "hanger-with-package-of-serum": {
+      "codepoint": 61717,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hanger-with-package-of-serum.svg"
+    },
+    "heart-monitor": {
+      "codepoint": 61718,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/heart-monitor.svg"
+    },
+    "herbal-medicine": {
+      "codepoint": 61719,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/herbal-medicine.svg"
+    },
+    "hospital-bed": {
+      "codepoint": 61720,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hospital-bed.svg"
+    },
+    "hospital-bedpan": {
+      "codepoint": 61721,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hospital-bedpan.svg"
+    },
+    "hospital-curtain": {
+      "codepoint": 61722,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hospital-curtain.svg"
+    },
+    "hospital-microscope": {
+      "codepoint": 61723,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hospital-microscope.svg"
+    },
+    "hospital-x-ray": {
+      "codepoint": 61724,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/hospital-x-ray.svg"
+    },
+    "inclined-thermometer": {
+      "codepoint": 61725,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/inclined-thermometer.svg"
+    },
+    "injecting-syringe": {
+      "codepoint": 61726,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/injecting-syringe.svg"
+    },
+    "medicine-mixing-bowl": {
+      "codepoint": 61727,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/medicine-mixing-bowl.svg"
+    },
+    "nurse-bust": {
+      "codepoint": 61728,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/nurse-bust.svg"
+    },
+    "old-man-walker": {
+      "codepoint": 61729,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/old-man-walker.svg"
+    },
+    "old-scale": {
+      "codepoint": 61730,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/old-scale.svg"
+    },
+    "operating-mask": {
+      "codepoint": 61731,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/operating-mask.svg"
+    },
+    "otoscope": {
+      "codepoint": 61732,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/otoscope.svg"
+    },
+    "oxygen-tube": {
+      "codepoint": 61733,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/oxygen-tube.svg"
+    },
+    "pipette-with-liquid": {
+      "codepoint": 61734,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/pipette-with-liquid.svg"
+    },
+    "pregnancy-test": {
+      "codepoint": 61735,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/pregnancy-test.svg"
+    },
+    "stethoscope": {
+      "codepoint": 61736,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/stethoscope.svg"
+    },
+    "surgeon-with-mask": {
+      "codepoint": 61737,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/surgeon-with-mask.svg"
+    },
+    "surgery-knife": {
+      "codepoint": 61738,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/surgery-knife.svg"
+    },
+    "surgical-scissors": {
+      "codepoint": 61739,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/surgical-scissors.svg"
+    },
+    "syrup-with-spoon": {
+      "codepoint": 61740,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/syrup-with-spoon.svg"
+    },
+    "three-test-tubes": {
+      "codepoint": 61741,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/three-test-tubes.svg"
+    },
+    "two-capsules": {
+      "codepoint": 61742,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/two-capsules.svg"
+    },
+    "two-crutches": {
+      "codepoint": 61743,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/two-crutches.svg"
+    },
+    "two-plasters": {
+      "codepoint": 61744,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/two-plasters.svg"
+    },
+    "wheelchair-facing-right": {
+      "codepoint": 61745,
+      "source": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg/wheelchair-facing-right.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".flaticon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Flaticon",
+    "force": true,
+    "input": {
+      "templates": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg",
+      "vectors": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font",
+      "fonts": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font",
+      "preview": "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font"
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.html",
+      "../../../../../sites/flaticon/libraries/webfont/templates/_flaticon.scss",
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.css"
+    ]
+  },
+  "templates": [
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/flaticon.html",
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/_flaticon.scss",
+    "/var/www/static/flaticon/zip_packs/111617-hospital-stuff/font/flaticon.css"
+  ]
+}

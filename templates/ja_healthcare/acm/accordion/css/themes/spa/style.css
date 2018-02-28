@@ -1,0 +1,80 @@
+.acm-accordion {
+  text-align: left;
+}
+.acm-accordion.panel-group .panel {
+  border: 0;
+  background: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.acm-accordion.panel-group .panel + .panel {
+  margin-top: 12px;
+}
+.acm-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #e6eaf0;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+  color: #888888;
+  padding: 24px;
+}
+.acm-accordion .panel-title {
+  position: relative;
+  font-size: 18px;
+}
+.acm-accordion .panel-title a {
+  background: #ffffff;
+  color: #915df0;
+  border: 1px solid #e6eaf0;
+  border-radius: 3px 3px 0 0;
+  display: block;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 50px;
+  text-indent: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.acm-accordion .panel-title a.collapsed {
+  color: #39391e;
+  border-radius: 3px;
+}
+.acm-accordion .panel-title a:focus,
+.acm-accordion .panel-title a:hover,
+.acm-accordion .panel-title a:focus {
+  outline: none;
+  text-decoration: none;
+}
+.acm-accordion .panel-title a:hover {
+  color: #915df0;
+}
+.acm-accordion .panel-title .marker {
+  background: transparent;
+  color: #999999;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: 0;
+  width: 50px;
+}
+.acm-accordion .panel-title .marker-close {
+  display: none;
+}
+.acm-accordion .panel-title .marker-open {
+  display: inline-block;
+}
+.acm-accordion .panel-title .collapsed .marker-close {
+  display: inline-block;
+}
+.acm-accordion .panel-title .collapsed .marker-open {
+  display: none;
+}
+.acm-accordion .panel-heading {
+  padding: 0;
+}

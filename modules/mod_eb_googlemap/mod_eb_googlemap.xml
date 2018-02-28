@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" position="left" method="upgrade">
+    <name>Events Booking - Google Map</name>
+    <author>Tuan Pham Ngoc</author>
+    <authorEmail>tuanpn@joomdonation.com</authorEmail>
+    <authorUrl></authorUrl>
+    <version>3.1.2</version>  
+    <creationDate>Feb 2014</creationDate>
+    <copyright>2014</copyright>
+    <license></license>
+    <description>This module display event locations and it's event on a google map</description>
+    <files>
+        <filename module="mod_eb_googlemap">mod_eb_googlemap.php</filename>
+        <filename>helper.php</filename>        
+		<folder>asset</folder>
+		<folder>tmpl</folder>		
+    </files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_eventbooking/elements">
+				<field name="moduleclass_sfx" type="text"
+					label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field
+						name="center_coordinates"
+						type="text"
+						default=""
+						label="Center Coordinates"
+						description="Center Coordinates of the map, for example 37.09024,-95.712891. Default to the coordinates of the location of first event" />
+				<field
+					name="width"
+					type="text"
+					default="100"
+					label="Width"
+					description="Map with (in %)" />
+				<field
+					name="height"
+					type="text"
+					default="400"
+					label="Height"
+					description="Map height (in px)" />
+				<field
+					name="zoom_level"
+					type="text"
+					default="8"
+					label="Zoom level"
+					description="" />
+				<field
+					name="number_events"
+					type="text"
+					default="15"
+					label="Max number events per location"
+					description="" />
+				<field 
+					name="category_ids" 
+					type="ebcategory"
+					multiple="true"		
+					default="" 
+					label="Select category" 
+					description="" />
+				<field
+					name="hide_past_events"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="Hide past events"
+					description="">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="disable_zoom"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="Disable scrollwheel"
+					description="Set to Yes to disable mouse scroll-wheel scaling with Google Maps API">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="Itemid" type="text"
+					   label="Menu Item ID" description="Menu Item ID" default="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

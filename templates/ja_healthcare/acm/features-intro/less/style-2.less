@@ -1,0 +1,96 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// -------------------------------
+// STYLE FEATURE INTRO 2
+// -------------------------------
+.acm-features.style-2 {
+  // Mobile view
+  @media (max-width: @screen-sm-max) {
+    min-height: 0!important;
+  }
+
+  .row {
+    margin: 0;
+
+    > div {
+      padding: 0;
+
+      &.features-text {
+        padding: @t3-global-padding * 1.5 @t3-global-padding * 3 @t3-global-padding * 3 @t3-global-padding * 1.5;
+
+        // Medium desktop view
+        @media (max-width: @screen-lg-max) {
+          padding: @t3-global-padding @t3-global-padding * 1.5 @t3-global-padding * 3 @t3-global-padding * 1.5;
+        }
+
+        // Tablet view
+        @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+          > p {
+            display: none;
+          }
+        }
+
+        // Mobile view
+        @media (max-width: @screen-xs-max) {
+          padding: @t3-global-padding / 2;
+        }
+      }
+    }
+  }
+
+  .features-img {
+    overflow: hidden;
+
+      img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+
+      // Tablet/Mobile view
+      @media (max-width: @screen-sm-max) {
+        width: 100%;
+      }
+    }
+  }
+
+  .owl-nav {
+    padding: 0;
+
+    // Control
+    &.owl-nav {
+      left: @t3-global-margin * 1.5;
+      bottom: @t3-global-margin * 1.5;
+      position: absolute;
+      margin: 0;
+    }
+  }
+
+  // Feature Info
+  .feature-info {
+    background: @brand-primary;
+    color: @white;
+
+    .info-text {
+      padding: @t3-global-padding * 1.5 @t3-global-padding * 3 @t3-global-padding * 1.5 @t3-global-padding * 1.5;
+
+      // Medium desktop view
+      @media (max-width: @screen-lg-max) {
+        padding: @t3-global-padding @t3-global-padding * 1.5 @t3-global-padding * 1.5 @t3-global-padding * 1.5;
+      }
+
+      // Tablet view
+      @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        > p {
+          display: none;
+        }
+      }
+
+      // Mobile view
+      @media (max-width: @screen-xs-max) {
+        padding: @t3-global-padding / 2;
+      }
+    }
+  }
+}

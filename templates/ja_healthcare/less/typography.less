@@ -1,0 +1,1031 @@
+/**
+* $JA#COPYRIGHT$
+*/
+ 
+
+// --------------------------------------------------
+// CORE TYPOGRAPHY (type.less)
+// Headings
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: @headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: @line-height-computed;
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; line-height: 36px; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+// Body text
+// -------------------------
+
+// Paragraphs
+// ----------
+p {
+  margin: 0 0 (@line-height-computed / 2);
+}
+
+.lead {
+  margin-bottom: @line-height-computed;
+  font-size: floor((@font-size-base * 1.15));
+  font-weight: 200;
+  line-height: 1.4;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: (@font-size-base * 1.5);
+  }
+}
+
+
+// Emphasis & misc
+// ---------------
+
+// Ex: 14px base font * 85% = about 12px
+small, .small   { font-size: 85%; }
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+.text-primary {
+  .text-emphasis-variant(@brand-primary);
+}
+.text-success {
+  .text-emphasis-variant(@state-success-text);
+}
+.text-info {
+  .text-emphasis-variant(@state-info-text);
+}
+.text-warning {
+  .text-emphasis-variant(@state-warning-text);
+}
+.text-danger {
+  .text-emphasis-variant(@state-danger-text);
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  .bg-variant(@brand-primary);
+}
+.bg-success {
+  .bg-variant(@state-success-bg);
+}
+.bg-info {
+  .bg-variant(@state-info-bg);
+}
+.bg-warning {
+  .bg-variant(@state-warning-bg);
+}
+.bg-danger {
+  .bg-variant(@state-danger-bg);
+}
+
+// Highlight
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+// ----------------------------
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+  ul,
+  ol{
+    margin-bottom: 0;
+  }
+}
+
+// List options
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.list-group {
+  .list-group-item-heading {
+    color: @gray-dark;
+  }
+  .list-group-item-text {
+    color: @gray-light;
+    font-size: @t3-font-size-small;
+    margin-bottom: @t3-global-margin;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: @line-height-computed;
+}
+
+dt,
+dd {
+  line-height: @line-height-base;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+@media (min-width: @grid-float-breakpoint) {
+  .dl-horizontal {
+    dt {
+      float: left;
+      width: (@component-offset-horizontal - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+    dd {
+      margin-left: @component-offset-horizontal;
+      &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    }
+  }
+}
+
+
+
+//
+// MISC
+// --------------------------------------------------
+
+// Color Swatches
+// ----------------
+.swatch-item {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  background: @gray-darker;
+  color: @white;
+  margin-bottom: @t3-global-margin;
+
+  @media (min-width: @screen-lg) {
+    min-height: 123px;
+  }
+
+  dl {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    margin: 0;
+  }
+}
+ 
+// The colors
+.color-brand-primary {
+  background: @brand-primary;
+}
+.color-brand-secondary {
+  background: @brand-secondary;
+}
+.color-brand-success {
+  background: @brand-success;
+}
+.color-brand-danger {
+  background: @brand-danger;
+}
+.color-brand-warning {
+  background: @brand-warning;
+}
+.color-brand-info {
+  background: @brand-info;
+}
+// TGrayscale Levels
+.color-gray-darker {
+  background: @gray-darker;
+}
+.color-gray-dark {
+  background: @gray-dark;
+}
+.color-gray {
+  background: @gray;
+}
+.color-gray-light {
+  background: @gray-light;
+  color: @gray-dark;
+}
+.color-gray-lighter {
+  background: @gray-lighter;
+  color: @gray-dark;
+}
+.color-gray-lightest {
+  background: @gray-lightest;
+  color: @gray-dark;
+}
+
+// Menu demo
+// --------------------------
+
+.nav-stacked {
+  & > li {
+
+    > a {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+  & + li {
+    margin-top: @t3-global-margin / 2;
+
+    }   
+  }
+  
+}
+
+
+
+
+// Abbreviations and acronyms
+// --------------------------
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+// Blockquotes
+// -----------
+blockquote {
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Quotes
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+// ---------
+address {
+  margin-bottom: @line-height-computed;
+  font-style: normal;
+  line-height: @line-height-base;
+}
+
+
+
+//
+// CODE (inline and block) (code.less)
+// -----------------------------------
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-monospace;
+}
+
+// Inline code
+code {
+}
+
+// Blocks of code
+pre {
+}
+
+// ANIMATIONS
+// --------------------------------------------------
+// Animate function
+@-webkit-keyframes popUp {
+  70% {
+    .opacity(0.8);
+    -webkit-transform: scale(1.1);
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% { 
+    -webkit-transform: scale(1); 
+    .opacity(1);
+  }
+}
+
+@-moz-keyframes popUp {
+  70% {
+    -moz-transform: scale(1.1);
+    .opacity(0.8);
+    -moz-animation-timing-function: ease-out;
+  }
+  100% { 
+    -moz-transform: scale(1); 
+    .opacity(1);
+  }
+}
+
+@keyframes popUp {
+  70% {
+    transform: scale(1.1);
+    .opacity(0.8);
+    animation-timing-function: ease-out;
+  }
+
+  100% { 
+    transform: scale(1); 
+    .opacity(1);
+  }
+}
+
+@-webkit-keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-15%);
+      transform: translateX(-15%);
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% { 
+    -webkit-transform: translateX(0);
+      transform: translateX(0);
+    .opacity(1);
+  }
+}
+
+@-moz-keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-15%);
+      transform: translateX(-15%);
+    -moz-animation-timing-function: ease-out;
+  }
+  100% { 
+    -webkit-transform: translateX(0);
+      transform: translateX(0);
+    .opacity(1);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-15%);
+      transform: translateX(-15%);
+    animation-timing-function: ease-out;
+  }
+
+  100% { 
+    -webkit-transform: translateX(0);
+      transform: translateX(0);
+    .opacity(1);
+  }
+}
+
+@-webkit-keyframes moveFromRight {
+  0% {
+    -webkit-transform: translateX(15%);
+      transform: translateX(15%);
+    -webkit-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@-moz-keyframes moveFromRight {
+  0% {
+    -webkit-transform: translateX(15%);
+      transform: translateX(15%);
+    -moz-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@keyframes moveFromRight {
+  50% {
+    -webkit-transform: translateX(15%);
+      transform: translateX(15%);
+    animation-timing-function: ease-out;
+    .opacity(0);
+  }
+
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@-webkit-keyframes moveFromBottom {
+  0% {
+    -webkit-transform: translateY(15%);
+      transform: translateY(15%);
+    -webkit-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@-moz-keyframes moveFromBottom {
+  0% {
+    -webkit-transform: translateY(15%);
+      transform: translateY(15%);
+    -moz-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@keyframes moveFromBottom {
+  50% {
+    -webkit-transform: translateY(15%);
+      transform: translateY(15%);
+    animation-timing-function: ease-out;
+    .opacity(0);
+  }
+
+  100% { 
+    -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    .opacity(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { 
+    -webkit-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+
+  100% { 
+    -webkit-animation-timing-function: ease-out;
+    .opacity(1);
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% { 
+    -webkit-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+
+  100% { 
+    -moz-animation-timing-function: ease-out;
+    .opacity(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% { 
+    -webkit-animation-timing-function: ease-out;
+    .opacity(0);
+  }
+
+  100% { 
+    animation-timing-function: ease-out;
+    .opacity(1);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    .opacity(0);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    .opacity(1);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    .opacity(0);
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    .opacity(1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.enable-effect {
+  @media(min-width: @screen-md-min) {
+    .ja-animate {
+      position: relative;
+      .perspective(600px);
+      .opacity(0);
+    }
+
+    .ja-inview {
+      .ja-animate[data-animation="pop-up"],
+      .ja-animate.pop-up {
+        -webkit-transform-style: preserve-3d;
+           -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-animation: popUp @t3-animation-speed ease-in-out forwards;
+           -moz-animation: popUp @t3-animation-speed ease-in-out forwards;
+            -ms-animation: popUp @t3-animation-speed ease-in-out forwards;
+                animation: popUp @t3-animation-speed ease-in-out forwards;
+        .scale(0.2)
+      }
+
+      .ja-animate[data-animation="move-from-left"],
+      .ja-animate.move-from-left {
+        -webkit-animation: moveFromLeft @t3-animation-speed ease-in-out forwards;
+           -moz-animation: moveFromLeft @t3-animation-speed ease-in-out forwards;
+                animation: moveFromLeft @t3-animation-speed ease-in-out forwards;
+      }
+
+      .ja-animate[data-animation="move-from-right"],
+      .ja-animate.move-from-right {
+        -webkit-animation: moveFromRight @t3-animation-speed ease-in-out forwards;
+           -moz-animation: moveFromRight @t3-animation-speed ease-in-out forwards;
+                animation: moveFromRight @t3-animation-speed ease-in-out forwards;
+      }
+
+      .ja-animate[data-animation="move-from-bottom"],
+      .ja-animate.move-from-bottom {
+        -webkit-animation: moveFromBottom @t3-animation-speed ease-in-out forwards;
+           -moz-animation: moveFromBottom @t3-animation-speed ease-in-out forwards;
+                animation: moveFromBottom @t3-animation-speed ease-in-out forwards;
+      }
+
+      .ja-animate[data-animation="fadeIn"],
+      .ja-animate.fadeIn {
+        -webkit-animation: fadeIn @t3-animation-speed ease-in-out forwards;
+           -moz-animation: fadeIn @t3-animation-speed ease-in-out forwards;
+                animation: fadeIn @t3-animation-speed ease-in-out forwards;
+      }
+
+      .ja-animate[data-animation="fadeInUp"],
+      .ja-animate.fadeInUp {
+        -webkit-animation: fadeInUp @t3-animation-speed ease-in-out forwards;
+           -moz-animation: fadeInUp @t3-animation-speed ease-in-out forwards;
+                animation: fadeInUp @t3-animation-speed ease-in-out forwards;
+      }
+
+      .ja-animate {
+        &[data-delay="item-0"],
+        &.dl-item-0 {
+          .animation-delay(400ms);
+        }
+
+        &[data-delay="item-1"],
+        &.dl-item-1 {
+          .animation-delay(800ms);
+        }
+
+        &[data-delay="item-2"],
+        &.dl-item-2 {
+          .animation-delay(1000ms);
+        }
+
+        &[data-delay="item-3"],
+        &.dl-item-3 {
+          .animation-delay(1200ms);
+        }
+
+        &[data-delay="item-4"],
+        &.dl-item-4 {
+          .animation-delay(1100ms);
+        }
+
+         &[data-delay="item-5"],
+         &.dl-item-5 {
+          .animation-delay(1200ms);
+        }
+
+         &[data-delay="item-6"],
+         &.dl-item-6 {
+          .animation-delay(1300ms);
+        }
+
+         &[data-delay="item-7"],
+         &.dl-item-7 {
+          .animation-delay(1400ms);
+        }
+
+         &[data-delay="item-8"],
+         &.dl-item-8 {
+          .animation-delay(1500ms);
+        }
+
+        &[data-delay="item-9"],
+         &.dl-item-9 {
+          .animation-delay(1600ms);
+        }
+
+        &[data-delay="item-10"],
+         &.dl-item-10 {
+          .animation-delay(1700ms);
+        }
+
+        &[data-delay="item-11"],
+         &.dl-item-11 {
+          .animation-delay(1800ms);
+        }
+
+        &[data-delay="item-12"],
+         &.dl-item-12 {
+          .animation-delay(1900ms);
+        }
+
+        &[data-delay="item-13"],
+         &.dl-item-13 {
+          .animation-delay(2000ms);
+        }
+
+        &[data-delay="item-15"],
+         &.dl-item-15 {
+          .animation-delay(2100ms);
+        }
+
+        &[data-delay="item-16"],
+         &.dl-item-16 {
+          .animation-delay(2200ms);
+        }
+
+        &[data-delay="200"],
+        &.dl-2 {
+          .animation-delay(200ms);
+        }
+
+        &[data-delay="400"],
+        &.dl-4 {
+          .animation-delay(400ms);
+        }
+
+        &[data-delay="600"],
+        &.dl-6 {
+          .animation-delay(600ms);
+        }
+
+        &[data-delay="800"],
+        &.dl-8 {
+          .animation-delay(800ms);
+        }
+
+        &[data-delay="1000"],
+        &.dl-10 {
+          .animation-delay(1000ms);
+        }
+      }
+    }
+  }
+}
+
+// fix for ie
+.enable-effect.ie11 {
+   .ja-animate.fadeInUp {
+    .opacity(1);
+  }
+}
+
+.enable-effect.ie9, 
+.enable-effect.ie8, 
+.enable-effect.old-ie,
+.enable-effect.ie9 .inview, 
+.enable-effect.ie8 .inview, 
+.enable-effect.old-ie .inview {
+   .ja-animate {
+    .opacity(1);
+  }
+}
+
+.enable-effect.ie9 .inview [data-animation="pop-up"], 
+.enable-effect.ie8 .inview [data-animation="pop-up"], 
+.enable-effect.old-ie .inview [data-animation="pop-up"] {
+  .ja-animate {
+    .scale(1);
+  }
+}
+
+
+// CUSTOM TYPOGRAPHY
+// -------------------------------------------------
+.article-content {
+  h2,h3,h4,h5,h6 {
+    color: @gray-dark;
+  }
+
+  .row {
+    margin-top: @t3-global-margin;
+    margin-bottom: @t3-global-margin;
+  }
+}
+
+.box-gray {
+  padding: @t3-global-padding;
+  background: @gray-lighter;
+
+  &.pull-right {
+    margin-left: @t3-global-margin;
+    margin-bottom: @t3-global-margin;
+  }
+
+  h4 {
+    color: @gray;
+    margin-top: 0;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.check-list {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      // Title list
+      h5 {
+        color: @gray-dark;
+        margin-bottom: 0;
+      }
+
+      // Icon Check
+      .fa-check-square-o {
+        color: @brand-success;
+        margin-right: @t3-global-margin / 4;
+      }
+
+      // Description
+      p {
+        padding-left: 18px;
+        font-size: @t3-font-size-small;
+      }
+    }
+  }
+}
+
+.box-address {
+  background: @gray-lightest;
+  padding: @t3-global-padding;
+  list-style: none;
+
+  .fa {
+    border: 1px solid @brand-success;
+    border-radius: 50%;
+    color: @brand-success;
+    line-height: 29px;
+    text-align: center;
+    height: 30px;
+    margin-right: @t3-global-margin / 4;
+    width: 30px;
+  }
+
+  li + li {
+    margin-top: @t3-global-margin / 2;
+  }
+}
+
+//
+// FEATURE LIST
+// --------------------------------------------------
+.btn-actions {
+  text-align: center;
+}
+
+.features-list {
+  margin-top: @t3-global-margin * 3;
+
+  .page-header {
+    border: 0;
+    text-align: center;
+
+    h1 {
+      font-size: @t3-font-size-bigger + 30;
+    }
+  }
+
+  /* Features Rows */
+  .feature-row {
+    overflow: hidden;
+    min-height: 200px;
+    color: #696f72;
+    border-top: 1px solid #e0e2e3;
+    padding: (@t3-global-padding * 3) 0 0;
+	 text-align:center;
+
+    &:last-child {
+      border-bottom: 1px solid #e0e2e3;
+      margin-bottom: @t3-global-margin * 3;
+    }
+
+    h3 {
+      font-size: @font-size-base * 2;      
+    }
+
+    div:first-child {
+      padding-left: 0;
+    }
+
+    div:last-child {
+      padding-right: 0;
+    }
+
+    div:first-child.feature-img img {
+      float: left;
+    }
+
+    div:last-child.feature-img img {
+      float: right;
+    }
+  }
+}
+
+
+.jumbotron {
+  h1 {
+    font-size: @font-size-h1;
+  }
+
+  h2 {
+    font-size: @font-size-h2;
+  }
+
+  p {
+    font-size: @font-size-base;
+  }
+
+  iframe {
+    margin-top: @t3-global-margin;
+    line-height: @line-height-base;
+  }
+}
+
+.container .jumbotron, 
+.container-fluid .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.has-success,
+.has-error,
+.has-warning{
+  & > .form-control:focus  {
+    box-shadow: none;
+  }
+}
+ 

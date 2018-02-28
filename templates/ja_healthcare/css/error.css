@@ -1,0 +1,241 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Healthcare Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+*/
+
+ /* Import Font 
+---------------------- */
+@import url(../fonts/font-awesome/css/font-awesome.min.css);
+
+ /* Common Error Page
+ ------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+
+}
+
+html {
+  background-color: #fff;
+  height: 100%;
+}
+
+body { 
+  background-color: #fff; 
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+
+.error {  
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+/* Code Error Page
+----------------------------- */
+.error-code {
+  margin-bottom: 20px;
+}
+
+.error-code span {
+  color: #3f6cb2;
+  display: inline-block;
+  font-size: 185px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.error-code span + span {
+  margin-left: 8px;
+}
+
+.error-code span.error-0 {
+  position: relative;
+}
+
+.error-code span.error-0::before {
+  content: "\f0f1";
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 37px; 
+  left:36px;
+  position: absolute;
+  top: 41%;  
+}
+
+.error-code span.error-0 + span.error-0 {
+  font-size: 185px;
+}
+
+.error-code span.error-0 + span.error-0::before {
+  content: " ";
+  font-size: 0; 
+}
+
+/* Animations Error Number */
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Message Error Page
+----------------------------- */
+.error-message h2{ 
+  font-size: 26px;
+  font-weight: 400;
+}
+
+#errorboxbody {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#errorboxbody p{
+  color: #818c98;
+  margin: 15px 0 17px;
+}
+
+#errorboxbody a {
+  background:#3f6cb2;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.0;
+  padding: 12px 15px 12px;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#errorboxbody a:hover,
+#errorboxbody a:focus,
+#errorboxbody a:active { 
+  background: #32558c;
+  cursor: pointer;
+}
+
+/* Responsive
+------------------------------------------------------ */
+@media screen and ( max-width : 360px ) {
+
+  .error-code span {
+    font-size: 160px;
+  }
+
+  .error-code span.error-0::before {
+    font-size: 34px; 
+    top: 40%;
+    left:32px;
+
+  }
+}
+
+/* RTL Style
+------------------------------------------------------ */
+ 
+
+
+
+
+
+
+

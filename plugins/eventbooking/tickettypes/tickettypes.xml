@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="eventbooking" method="upgrade">
+    <name>Events Booking - Ticket Types</name>
+    <author>Tuan Pham Ngoc</author>
+    <creationDate>July 2016</creationDate>
+    <author>Tuan Pham Ngoc</author>
+    <authorEmail>tuanpn@joomdonation.com</authorEmail>
+    <authorUrl>http://www.joomdonation.com</authorUrl>
+    <copyright>Copyright (C) 2010 - 2017 Ossolution Team</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.1.2</version>
+    <description>This plugin allows you to add different ticket types for your events</description>
+    <files>
+        <filename plugin="tickettypes">tickettypes.php</filename>
+    </files>    
+</extension>

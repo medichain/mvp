@@ -1,0 +1,51 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// SPOTLIGHT STYLE
+// -----------------
+.acm-spotlight {
+	// Remove Space
+	&.full-width {
+		overflow: hidden;
+		
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+
+			> div {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.t3-module  {
+		margin-bottom: 0;
+
+		// Mobile view
+		@media (max-width: @screen-xs-max) {
+			margin-bottom: @t3-global-margin;
+		}
+	}
+
+	.col-sm-12.col-md-4 {
+		// Tablet view
+		@media (max-width: @screen-sm-max) {
+			margin-bottom: @t3-global-margin;
+		}
+	}
+
+	// Remove min-height on mobile
+	.equal-height-child .col > div:not(.acm-video) {
+		// Mobile view
+		@media (max-width: @screen-sm-max) {
+			min-height: 0!important;
+		}
+	}
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>plg_content_bibtex</name>
+	<author>Levente Hunyadi</author>
+	<creationDate>June 11, 2010</creationDate>
+	<copyright>© 2009-2017 Levente Hunyadi. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorUrl>http://hunyadi.info.hu/projects/bibtex</authorUrl>
+	<version>1.1.5.3</version>
+	<description>BIBTEX_DESCRIPTION</description>
+	<files folder="bibtex">
+		<filename>index.html</filename>
+		<filename plugin="bibtex">bibtex.php</filename>
+		<filename>latex.php</filename>
+		<filename>references.php</filename>
+		<folder>bib</folder>
+		<filename>bib.php</filename>
+		<filename>ris.php</filename>
+		<filename>sort.php</filename>
+	</files>
+	<media folder="media" destination="bibtex">
+		<filename>index.html</filename>
+		<folder>example</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
+	<languages folder="language">
+	   <language tag="en-GB">en-GB.plg_content_bibtex.ini</language>
+	   <language tag="en-GB">en-GB.plg_content_bibtex.sys.ini</language>
+	   <language tag="fr-FR">fr-FR.plg_content_bibtex.ini</language>
+	   <language tag="hu-HU">hu-HU.plg_content_bibtex.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" name="bibtex updates">http://hunyadi.info.hu/projects/bibtex/extension.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="folder" type="text" default="media/bibtex/example" label="BIBTEX_FOLDER" description="BIBTEX_FOLDER_DESCRIPTION" />
+				<field name="sort_order" type="list" default="unsorted" label="BIBTEX_SORT_ORDER" description="BIBTEX_SORT_ORDER_DESCRIPTION">
+					<option value="unsorted">BIBTEX_SORT_ORDER_UNSORTED</option>
+					<option value="date_asc">BIBTEX_SORT_ORDER_DATE_ASCENDING</option>
+					<option value="date_desc">BIBTEX_SORT_ORDER_DATE_DESCENDING</option>
+				</field>
+				<field name="show_raw_bibtex" type="radio" default="1" label="BIBTEX_RAW" description="BIBTEX_RAW_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="cache" type="radio" default="1" label="BIBTEX_CACHE" description="BIBTEX_CACHE_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="bold_titles" type="radio" default="0" label="BIBTEX_BOLD_TITLES" description="BIBTEX_BOLD_TITLES_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="hanging_indent" type="radio" default="0" label="BIBTEX_HANGING_INDENT" description="BIBTEX_HANGING_INDENT_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="separate_title" type="radio" default="0" label="BIBTEX_SEPARATE_TITLE" description="BIBTEX_SEPARATE_TITLE_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="separate_venue" type="radio" default="0" label="BIBTEX_SEPARATE_VENUE" description="BIBTEX_SEPARATE_VENUE_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="separate_url" type="radio" default="0" label="BIBTEX_SEPARATE_URL" description="BIBTEX_SEPARATE_URL_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_notes" type="radio" default="0" label="BIBTEX_SHOW_NOTES" description="BIBTEX_SHOW_NOTES_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="separate_notes" type="radio" default="0" label="BIBTEX_SEPARATE_NOTES" description="BIBTEX_SEPARATE_NOTES_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_abstract" type="radio" default="0" label="BIBTEX_SHOW_ABSTRACT" description="BIBTEX_SHOW_ABSTRACT_DESCRIPTION">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="author_list" type="textarea" rows="6" label="BIBTEX_AUTHORS_LIST" description="BIBTEX_AUTHORS_LIST_DESCRIPTION" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

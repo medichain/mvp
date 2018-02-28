@@ -1,0 +1,879 @@
+/*
+$JA#COPYRIGHT$
+*/
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+//
+// TEMPLATES OPTIONS FORM
+// ------------------------------
+.com_config #templates-form {
+  legend {
+  }
+
+  .tip {
+    background: @well-bg;
+    padding: (@padding-base-vertical * 2) @padding-base-horizontal;
+  }
+
+  textarea {
+    height: auto;
+    width: auto;
+    min-height: 100px;
+    min-width: 50%;
+  }
+
+  .input-append,
+  .input-prepend {
+    .add-on {
+      width: 35px;
+    }
+    input {
+      display: inline-block;
+    }
+    .btn {
+      border: 1px solid @t3-border-color;
+    }
+  }
+
+  // Hiding useless elements
+  .t3-admin-form-legend {
+    display: none;
+  }
+
+  // Expand the grid
+  .row-fluid .span6 {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .control-group .control-label {
+      width: 250px;
+    }
+    .control-group .controls {
+      margin-left: 280px;
+    }
+  }
+
+}
+
+
+//
+// MODULES OPTIONS FORM
+// ---------------------------------------------------------
+.com_config #modules-form {
+  .input-append,
+  .input-prepend {
+    .add-on {
+      width: 35px;
+    }
+
+    input {
+      display: inline-block;
+    }
+
+    .btn {
+      border: 1px solid @t3-border-color;
+    }
+  }
+
+  // Accordion group
+  // ---------------
+  .accordion-group {
+    margin-bottom: 20px;
+
+    .accordion-heading {
+      .accordion-toggle {
+        border: 1px solid #ddd;
+        border-radius: 5px 5px 0 0;
+        color: #428bca;
+        display: block;
+        padding: 10px;
+        outline: none;
+
+        &.collapsed {
+          border-radius: 5px;
+          color: #666;
+        }
+      }
+    }
+
+    .accordion-body {
+      border: 1px solid #ddd;
+      border-top: 0;
+      border-radius: 0 0 5px 5px;
+      padding-top: 20px;
+
+      .nav-tabs {
+        border-bottom: 0;
+
+        .control-group {
+          margin-top: @t3-global-margin;
+        }
+      }
+    }
+
+  }
+
+  // Fix for K2 module
+  // -----------------
+  .radio input[type="radio"] {
+    margin-left: 0;
+    position: relative;
+  }
+
+  .radio label {
+    padding-left: 5px;
+    padding-right: 20px;
+  }
+}
+
+.controls select {
+  vertical-align: middle;
+  width: 220px;
+}
+
+//
+// EDIT & SUBMIT ARTICLE FORM
+// ---------------------------------------------------------
+.edit {
+  ul.nav-tabs {
+    margin-bottom: 0;
+    margin-top: @t3-global-margin * 2;
+  }
+
+  fieldset {
+  }
+  
+  fieldset legend {
+  }
+  
+  label {
+  }
+
+  .inputbox, input[type="text"],
+  select.inputbox, select {
+    @media (min-width: @screen-sm) {
+      width: 250px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .input-append,
+  .input-prepend {
+    display: block;
+    width: auto;
+    @media (min-width: @screen-sm) {
+      input[type="text"],
+      input.inputbox {
+        display: inline-block;
+        width: 210px;
+      }
+    }
+
+    .btn {
+      border: 1px solid @t3-border-color;
+      background-color: @btn-default-bg;
+      color: @btn-default-color;
+    }
+  }
+
+  // Modal button
+  .btn-toolbar .btn-group button[class*="modal"]{
+    color: @white;
+    background: @btn-default-bg;
+
+    &:hover, &:focus, &:active {
+      background: darken(@btn-default-bg, 10%);      
+    }
+  }
+}
+
+
+// Tabs
+// -----------------------
+.edit {
+  .nav-tabs {
+    margin-bottom: @t3-global-margin;
+  }
+  .tab-pane {
+    .clearfix();
+  }
+}
+
+
+// Editor Buttons
+// ----------------------
+#editor-xtd-buttons,
+.toggle-editor {
+  margin-top: @line-height-computed;
+  margin-bottom: @line-height-computed;
+  .btn {
+    background-color: @btn-default-bg;
+    text-shadow: 0 1px 0 #fff; 
+    border-color: @btn-default-border;
+    color: @btn-default-color;
+
+    &:hover,&:focus,&:active {
+      background: @btn-default-border;
+      color: contrast(@btn-default-border);
+    }
+  }
+}
+
+#editor-xtd-buttons {
+  margin-right: @grid-gutter-width;
+}
+
+.controls > input {
+  box-shadow: none;
+
+  &:focus, &:active {
+    box-shadow: none;
+    color: @gray-light-lv1;
+  }
+
+}
+
+
+
+// 
+// FRONTEDIT ELEMENTS 
+// ---------------------------------------------------------
+
+// Window Wrapper
+// ---------------------------------------
+#sbox-window {
+  padding: 0;
+  .box-sizing(content-box); // Reset Box-Sizing model
+
+  // With shadow
+  &.shadow {
+  }
+
+  // Content
+  #sbox-content {
+  }
+
+  .sbox-content-iframe {
+  }
+
+}
+
+// Close Button
+#sbox-btn-close {
+}
+
+// Overlay Layer
+#sbox-overlay {
+}
+
+
+// Frontend Edit Button
+// ---------------------------------------
+.btn.jmodedit {
+  padding: 0;
+  &:focus, &:active {
+    box-shadow: none;
+  }
+}
+
+.jfedit-menu + .tooltip {
+  min-width: 100px;
+}
+
+
+// Frontend Edit Elements
+// ---------------------------------------
+.window {
+
+  // Form Table
+  // ----------
+  form table {
+    border: 1px solid @table-border-color;
+    background: @table-bg-accent;
+    margin-bottom: @line-height-computed;
+    td {
+      padding: @table-cell-padding;
+    }
+  }
+
+  // Form Help Block
+  // ---------------
+  form .help-block {
+    font-size: @font-size-small;
+    clear: both;
+    padding-top: 5px;
+  }
+
+  &.view-modules {
+
+    .well {
+      .control-label {
+        display: inline-block;
+      }
+
+      .controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+
+    .control-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    #filter-bar {
+      margin-bottom: 10px;
+
+      .btn-group button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+// Media Manager
+// -------------
+.window {
+
+  // Main Form
+  #imageForm {
+    margin: 0;
+    width: auto;
+
+    .chzn-container {
+      float: left;
+    }
+
+    #upbutton {
+      border: 1px solid @btn-default-border;
+      float: left;
+      padding: 3px 12px;
+      margin-left: 5px;
+    }
+
+    .pull-right {
+      margin-right: @grid-gutter-width;
+    }
+
+    .well {
+      &:after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+    }
+
+    .btn:not(.btn-primary) {
+      border: 1px solid @btn-primary-border;
+      background: @btn-primary-bg;
+      color: @btn-primary-color;
+
+      &:hover,&:focus,&:active {
+        background: darken(@btn-primary-bg, 10%);
+       
+      }
+    }
+
+  }
+
+  // Upload Form
+  #uploadForm {
+    width: auto;
+
+    #upload-file {
+      margin: 10px 0;
+    }
+  }
+
+ 
+  // Images Choser Iframe
+  #imageframe {
+  }
+
+  .manager {
+    margin: 0;
+    padding: 0;
+    .clearfix();
+    .thumbnail {
+      background: @white;
+      float: left;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+// End
+}
+
+
+// Insert Article
+// --------------
+.window.view-articles {
+  .filter {
+    overflow: visible;
+
+    .btn-toolbar {
+      .icon-remove,
+      .icon-search {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .filters {
+    float: none !important;
+
+    .chzn-container {
+      display: inline-block;
+    }
+
+    .chzn-drop input {
+      float: none;
+    }
+  }
+}
+
+
+//
+// Special Radio Styles for T3
+// ------------------------------
+.t3onoff {
+  border: 1px solid #aaa;
+  border-radius: 0;
+  display: block;
+  height: 30px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 90px;
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    width: 90px;
+    height: 30px;
+    overflow: hidden;
+    display: block;
+    border-radius: 0;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 1;
+    text-transform: uppercase;
+    background: url(../imgs/blank.gif) no-repeat transparent;
+    text-indent: -999em;
+  }
+
+  /* use before as background */
+  label:before,
+  label:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+
+    .transition(all 250ms);
+  }
+
+  label:before {
+    content: "ON";
+    width: 100%;
+    height: 100%;
+
+    text-indent: 0;
+    color: white;
+    padding: 4px 18px;
+    font-weight: normal;
+  }
+
+  /* use after as switch */
+  label:after {
+    content: "";
+    width: 40%;
+    height: 100%;
+    background: #fff;
+  }
+
+  label.off:before {
+    content: "OFF";
+    text-align: right;
+    color: #555;
+  }
+
+  /* active label should be under => so inactive can be clickable */
+  label.active {
+    z-index: 0;
+  }
+
+  /* off background */
+  label.off:before {
+    background: #eee;
+    left: 100%;
+  }
+
+  label.off.active:before {
+    left: 0%;
+  }
+
+  label.on:before {
+    background: #690;
+    left: -100%;
+  }
+
+  label.on.active:before {
+    left: -0%;
+  }
+
+  /* off switch */
+  label.off:after {
+    left: 60%;
+  }
+
+  label.off.active:after {
+    left: 0%;
+  }
+
+  label.on:after {
+    left: 0%;
+  }
+
+  label.on.active:after {
+    left: 60%;
+  }
+}
+
+/* radio btn group */
+fieldset.radio.btn-group {
+  padding: 0;
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    min-width: 54px;
+    padding: 0 12px;
+    border: 1px solid #aaa;
+    line-height: 28px;
+    background: #eee;
+    color: #555;
+    border-radius: 0;
+    text-align: center;
+    border-right-width: 0px;
+    text-transform: uppercase;
+
+    &:last-child {
+      border-right-width: 1px;
+    }
+
+    &.active {
+      background: #690;
+      border-color: #5c8b00;
+      color: #fff;
+    }
+  }
+}
+
+
+// Frontend Edit Insert module
+// ---------------------------------------
+.window.view-modules,
+.window.view-articles,
+.window.view-contacts {
+  .js-stools {
+    margin-bottom: 20px;
+
+    .btn {
+      border: 1px solid @input-border;
+      margin-top: 0;
+
+      &:hover,&:focus,&:active {
+        background: @input-border;
+        color: @gray-dark;
+
+        .caret {
+          border-bottom-color: @gray-dark;
+        }
+      }
+    }
+
+    .input-append .btn {
+      border-left: 0;
+    }
+
+    input {
+      display: inline-block;
+    }
+  }
+
+  .js-stools-field-filter {
+    vertical-align: top;
+  }
+
+  .js-stools-container-filters {
+    .chzn-container-multi,
+    .chzn-container-single {
+      width: 220px !important;
+    }
+
+    .chzn-drop {
+      box-sizing: border-box !important;
+    }
+  }
+
+  table#moduleList {
+    td .label {
+      background-color: #999;
+      box-sizing: border-box;
+      border-radius: 3px;
+      display: inline-block;
+      font-weight: normal;
+      font-size: 100%;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  table#moduleList td:nth-child(1) {
+    vertical-align: middle;
+  }
+
+  .icon-publish {
+    &:before {
+      content: "\f00c";
+      font-size: 16px;
+    }
+  }
+}
+
+
+//
+// LEGACY
+// -----------------------------------------------------------
+
+// Fix for missing icons
+// because of the change from Font Awesome 3 to Font Awesome 4
+// -----------------------------------------------------------
+
+.icon-eye-open:before,
+.icon-eye:before {
+  content:"\f06e";
+  font-family: "FontAwesome";
+}
+
+.icon-file-add:before {
+  content:"\f0f6";
+  font-family: "FontAwesome";
+}
+
+.icon-cancel:before {
+  content:"\f00d";
+  font-family: "FontAwesome";
+}
+
+.icon-pictures:before {
+  content:"\f1c5";
+  font-family: "FontAwesome";
+}
+
+
+.icon-copy:before {
+  content:"\f0c5";
+  font-family: "FontAwesome";
+}
+
+
+.icon-arrow-down:before {
+  content:"\f063";
+  font-family: "FontAwesome";
+}
+
+
+// Legacy class for Joomla 2.5
+// ---------------------------
+.button2-left,
+.button2-left div {
+  float: left;
+}
+
+.button2-right,
+.button2-right div {
+  float: right;
+}
+
+.button2-left {
+  margin: 5px 5px 0 0;
+}
+
+.button2-right {
+  margin: 5px 0 0 5px;
+}
+
+.button2-left a,
+.button2-right a,
+.button2-left span,
+.button2-right span {
+  background: @gray-lighter;
+  border: 1px solid darken(@gray-lighter, 5%);
+  color: @gray-light;
+  cursor: pointer;
+  display: block;
+  float: left;
+  padding: 2px 10px;
+  border-radius: @border-radius-base;
+}
+
+.button2-left span,
+.button2-right span {
+  color: @gray-light;
+  cursor: default;
+}
+
+.button2-left .page a,
+.button2-right .page a,
+.button2-left .page span,
+.button2-right .page span {
+  padding: 0 6px;
+}
+
+.button2-left a:hover,
+.button2-right a:hover {
+  background: darken(@gray-lighter, 5%);
+  color: @gray-dark;
+  text-decoration: none;
+}
+
+.edit.item-page a.modal,
+.com_config form a.modal {
+  display: inline-block;
+  position: inherit;
+  width: auto !important;
+  top: auto !important;
+  overflow: hidden;
+
+  &.btn {
+    background: @btn-default-bg;
+    color: @btn-default-color;
+    text-shadow: 0 1px 0 #fff; 
+    border-color: @t3-border-color;
+    overflow: hidden;
+    text-shadow: none;
+
+    &:hover,&:focus,&:active {
+      background: @brand-primary;
+      color: @white;
+    }
+  }
+}
+
+.height-50 {
+  line-height: 50px;
+}
+
+// Calendar Button
+.controls img.calendar {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+// Break page layout
+// -----------------
+.layout-pagebreak {
+  .form-horizontal .control-group .controls {
+    margin-left: 0;
+  }
+}
+
+// View history
+// ------------
+[class^="icon-"], [class*=" icon-"] {
+  font-family: FontAwesome3 !important;
+}
+
+.view-history .btn-group {
+  margin-bottom: 10px;
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  margin-right: 5px;
+}
+
+.btn span.icon-delete {
+  &:before {
+    content: "\f057";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    color: #333;
+  }
+}
+
+
+// Popup Article
+.window-mainbody {
+  .filter {
+    .btn-toolbar {
+      label {
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    .btn-group {
+      button {
+        border: 2px solid @btn-default-border;
+        margin-right: @t3-global-margin / 4;
+
+        &:hover,&:focus,&:active {
+          background: @btn-default-border;
+          color: contrast(@btn-default-border);
+        }
+      }
+    }
+  }
+
+  // Print Page
+  .item-page .category-name {
+    display: inline-block;
+    position: static;
+  }
+
+  // Add Module Position
+  .well {
+    background-color: @well-bg;
+    .clearfix();
+  }
+
+  #filter-bar {
+    margin-bottom: @t3-global-margin;
+
+    .btn {
+      margin-top: 0;
+      border: 0;
+      .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border)
+    }
+  }
+}
+
+// Calendar Button
+.controls img.calendar {
+  cursor: pointer;
+  margin-left: 5px;
+}

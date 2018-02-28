@@ -1,0 +1,116 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ----------------------------------------
+// VIDEO STYLE
+// ----------------------------------------
+.acm-video {
+  &.style-1 {
+    background: @black;
+    overflow: hidden;
+    position: relative;
+
+    // Desktop view
+    @media (min-width: @screen-lg-min) {
+      min-height: 600px;
+    }
+    // Mobile view
+    @media (max-width: @screen-sm-max) {
+      min-height: 0!important;
+    }
+
+    // Image Thumbnail
+    .video-thumb {
+      &:before {
+        background: @brand-primary;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        .opacity(0.8);
+      }
+      
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+        width: auto;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+
+    &.playing {
+      .video-thumb,
+      .btn-border {
+        display: none;
+      }
+    }
+
+    .video-wrapper {
+      height: 0;
+      padding-bottom: 56.25%;
+      padding-top: 0;
+      position: relative;
+      background-color: @black;
+    }
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .btn-rounded {
+        border-radius: 50%;
+        height: 72px;
+        line-height: 82px;
+        padding: 0 !important;
+        width: 72px;
+        border-width: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        border: 2px solid @white;
+        color: @white;
+        margin-top: -36px;
+        margin-left: -36px;
+
+        &:hover {
+          box-shadow: none;
+          color: @brand-primary;
+        }
+
+        .fa {
+          font-size: 32px;
+          margin-left: @t3-global-margin / 4;
+        }
+      }
+    }
+
+    .video-player {
+    // Desktop view
+    @media (min-width: @screen-md-min) {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+}

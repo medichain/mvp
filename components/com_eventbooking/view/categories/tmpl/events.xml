@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Categories - Events list">
+		<message>
+			Displays a list of categories and it's event in each category
+		</message>
+	</layout>
+	<state>
+		<name>Categories - Events list</name>
+		<description>Displays a list of categories and it's event in each category</description>
+		<fields name="request">			
+			<fieldset name="request"
+				addfieldpath="/administrator/components/com_eventbooking/elements">
+				<field name="id" type="ebcategory" size="3" default="0" label="Select Category" description="Choose the category which you want to list it's sub categories" />
+			</fieldset>	
+		</fields>				
+	</state>
+</metadata>

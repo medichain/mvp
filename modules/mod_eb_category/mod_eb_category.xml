@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>Events Booking - Event Categories</name>
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>Aug 2010</creationDate>
+	<copyright>Ossolution Team</copyright>
+	<license>GPL</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>3.1.2</version>
+	<description>This module is used to display categories in Event Booking Extension</description>
+	<files>		
+		<filename module="mod_eb_category">mod_eb_category.php</filename>		
+		<filename module="mod_eb_category">tmpl/default.php</filename>		
+	</files>		
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+						<field name="moduleclass_sfx" type="text"
+							label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX">
+						</field>
+						<field name="parent_id" type="text"
+							label="Parent Category Id" description="" default="0">
+						</field>
+						<field name="number_categories" type="text"
+							label="Number Categories" description="Number of Categories to be showed on the module" default="0">
+						</field>
+						<field name="item_id" type="text"
+							label="Item ID" description="Menu ItemID" default="">
+						</field>				
+			</fieldset>
+		</fields>		
+	</config>
+</extension>

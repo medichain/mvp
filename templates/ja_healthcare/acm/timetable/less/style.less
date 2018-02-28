@@ -1,0 +1,215 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.acm-timeline {
+  overflow: auto;
+  width: 100%;
+
+	section {
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: cover;
+	}
+
+  .acm-timeline-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .acm-timeline-dates {
+    font-size: @t3-font-size-small;
+    color: @gray-light;
+    margin: @t3-global-margin 0 0;
+  }
+
+	.timeline-title {
+		color: @white;
+	  font-size: @font-size-h1;
+	  font-weight: @font-weight-normal;
+	  line-height: 1;
+	  margin: 0 0 @t3-global-margin;
+	  text-align: center;
+	}
+
+	.blockline:after, .blockline:before {
+		background-color: @white;
+	}
+
+	.timeline-caption {
+		color: @white;
+		text-transform: uppercase;
+		font-weight: @font-weight-thin;
+		display: inline-block;
+    font-size: @font-size-base;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+	}
+
+	.timeline-desc {
+		color: @white;
+    font-size: @font-size-large;
+		margin-bottom: 0;
+		.opacity(0.8);
+	}
+
+	&.style-light {
+		.timeline-title,
+		.timeline-caption,
+		.timeline-desc {
+			color: @gray-dark;
+		}
+
+		.blockline:after, .blockline:before {
+			background-color: @gray-dark;
+		}
+	}
+}
+
+
+// PRICING TABLE
+// ---------------------------------------
+.timeline-table {
+  padding-top: @t3-global-padding * 2;
+  padding-bottom: @t3-global-padding * 2;
+  color: @text-color;
+  width: @container-large-desktop;
+
+  .col {
+    margin-bottom: 0;
+    float: left;
+    min-height: 1px;
+
+    // Remove padding of the column
+    // ----------------------------
+    &.no-padding {
+    
+    }
+
+    &.shadow {
+    	.col-header {
+    		border: 0;
+    	}
+    }
+
+
+    // Typography's Pricing table
+    // --------------------------
+    .big-number {
+      display: inline-block;
+      font-size: @font-size-small;
+      color: @gray-light;
+
+      sup {
+        font-size: @font-size-base * 2;
+        top: -1em;
+      }
+    }
+
+    .btn {
+      font-size: @font-size-base + 6;
+      padding: (@t3-global-padding / 2) @t3-global-padding;
+    }
+
+
+    // Header of column
+    // ----------------
+    .col-header {
+      background: @gray-lighter;
+      background: rgba(255,255,255,0.8);
+      border-radius: 3px 3px 0 0;
+      border: 1px solid @t3-border-color;
+      border-bottom: 0;
+      color: @text-color;
+      padding: (@t3-global-padding / 2) @t3-global-padding;
+      margin-left: -1px;
+      margin-right: -1px;
+
+      h2, .h2 {
+      	font-size: @font-size-large;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+
+    // Body of column
+    // --------------
+    ul {
+      border: 1px solid @gray-lighter;
+      border-bottom: 0;
+      list-style: none;
+      margin: 0 -1px;
+      padding: 0;
+
+      li {
+        border-bottom: 1px solid @gray-lighter;
+        font-size: @font-size-base;
+        padding: (@t3-global-padding / 2) @t3-global-padding;
+        text-align: center;
+        background-color: @white;
+
+        &.row1 {
+          background: @gray-lightest;
+        }
+
+        i {
+          color: @green;
+          font-size: @font-size-base + 4;
+        }
+
+        &.no i {
+          color: @red;
+        }
+
+
+        &.no {
+          color: @gray-light;
+          text-decoration: line-through;
+        }
+      }
+    }
+
+
+    // Footer of column
+    // ----------------
+    .col-footer {
+      background: @gray-lighter;
+      border: 1px solid darken(@gray-lighter, 10%);
+      padding: @t3-global-padding;
+    }
+
+  }
+
+  .row-body {
+    ul li > a {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  
+  // Feature column
+  // --------------
+  .col-featured {
+    z-index: 1;
+
+    // Larger margin on Tablet / Desktop
+    .col-header {
+      color: @brand-secondary;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// -------------------------------
+// STYLE FEATURE INTRO 1
+// -------------------------------
+.acm-features.style-1 {
+  background: @gray-light-lv5;
+  padding-bottom: @t3-global-padding * 3;
+
+  // Tablet view
+  @media (max-width: @screen-sm-max) {
+    padding-bottom: @t3-global-padding;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  // Feature Title
+  .acm-features-title {
+    color: @gray-dark-lv2;
+    font-weight: @font-weight-normal;
+    line-height: 36px;
+    margin-top: 0;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      font-size: 22px;
+    }
+  }
+  
+  .features-content {
+    background: @white;
+    padding: @t3-global-padding;
+
+    h3 {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+  }
+
+  // Carousel
+  .owl-wrapper-outer {
+    // Desktop view
+    @media (min-width: @screen-md-min) {
+      right: -@t3-global-margin / 2;
+    }
+  }
+  .owl-carousel {
+    padding: 0;
+    margin-top: @grid-gutter-width;
+
+    // Desktop view
+    @media (min-width: @screen-md-min) {
+      margin-top: -(@t3-global-margin);
+    }
+  }
+
+  .owl-item {
+    padding: @t3-global-padding @t3-global-padding / 2 @t3-global-padding @t3-global-padding / 2;
+
+    // Tablet view
+    @media (max-width: @screen-sm-max) {
+      padding: 0 @t3-global-padding / 2;
+    }
+  }
+
+  .features-item-inner {
+    background: @white;
+    border-radius: @border-radius-base;
+    padding: @t3-global-padding;
+    .transition(all 400ms);
+
+    &:hover {
+      box-shadow: 0 0 18px rgba(0,0,0,0.1);
+      cursor: pointer;
+
+      h4 {
+        color: @brand-primary;
+        .transition(all 400ms);
+      }
+    }
+
+    // Intro Image
+    .features-img {
+      border-radius: @border-radius-base @border-radius-base 0 0;
+      margin: -(@t3-global-margin + 1) -(@t3-global-margin + 1) (@t3-global-margin) -(@t3-global-margin + 1);
+      overflow: hidden;
+    }
+
+    // Actions
+    .feature-action {
+      border-top: 1px solid @t3-border-color;
+      margin: (@t3-global-margin * 2) -(@t3-global-margin) -(@t3-global-margin) -(@t3-global-margin);
+      padding: @t3-global-padding;
+    }
+  }
+
+  // Control
+  .owl-nav {
+    bottom: 0;
+    left: -34.3333%;
+    position: absolute;
+    margin-bottom: @t3-global-margin;
+  }
+}
